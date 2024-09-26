@@ -22,6 +22,7 @@
     <h1>Lista de Estudiantes</h1>
     <div class="containerbutton">
     <a  class="buttonagregar" href="agregar.php">Nuevo estudiante</a>
+    <a  class="buttonagregar" href="grafica.php">Gráficos</a>
 </div>
     <div class="container">
     <table>

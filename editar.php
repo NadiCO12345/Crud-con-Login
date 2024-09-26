@@ -10,11 +10,11 @@
         // Función de validación del formulario
         function validarFormulario() {
             // Obtener los valores de los campos del formulario
-            var nombre = document.forms["formulario"]["nombre"].value;
-            var apellido = document.forms["formulario"]["Apellido"].value;
-            var edad = document.forms["formulario"]["Edad"].value;
-            var correo = document.forms["formulario"]["Correo"].value;
-            var dni = document.forms["formulario"]["Control"].value;
+            var nombre = document.querySelector("[name='nombre']").value;
+            var apellido = document.querySelector("[name='apellido']").value;
+            var edad = document.querySelector("[name='edad']").value;
+            var correo = document.querySelector("[name='correo']").value;
+            var dni = document.querySelector("[name='dni']").value;
 
             // Validar campo Nombre
             if (nombre === "") {
@@ -53,7 +53,7 @@
             if (dni === "") {
                 alert("El campo DNI es obligatorio.");
                 return false;
-            } else if (!/^\d{9}$/.test(dni)) {
+            } else if (!/^\d{8}$/.test(dni)) {
                 alert("El DNI debe contener exactamente 9 dígitos.");
                 return false;
             }
@@ -129,11 +129,11 @@
     <div class="form-container">
     <h1>Editar Estudiante</h1>
     <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" onsubmit="return validarFormulario()">
-        <div class="inputfield"><input type="text" name="nombre" placeholder="Nombre" value="<?php echo htmlspecialchars($nombre); ?>" required></div>
-        <div class="inputfield"><input type="text" name="apellido" placeholder="Apellido" value="<?php echo htmlspecialchars($apellido); ?>" required></div>
-        <div class="inputfield"><input type="text" name="edad"  placeholder="Edad"value="<?php echo htmlspecialchars($edad); ?>" required></div>
-        <div class="inputfield"><input type="text" name="correo"  placeholder="Correo" value="<?php echo htmlspecialchars($correo); ?>" required></div>
-        <div class="inputfield"><input type="text" name="dni" placeholder="DNI" value="<?php echo htmlspecialchars($dni); ?>" required></div>
+        <div class="inputfield"><input type="text" name="nombre" placeholder="Nombre" value="<?php echo htmlspecialchars($nombre); ?>"></div>
+        <div class="inputfield"><input type="text" name="apellido" placeholder="Apellido" value="<?php echo htmlspecialchars($apellido); ?>"></div>
+        <div class="inputfield"><input type="text" name="edad"  placeholder="Edad"value="<?php echo htmlspecialchars($edad); ?>"></div>
+        <div class="inputfield"><input type="text" name="correo"  placeholder="Correo" value="<?php echo htmlspecialchars($correo); ?>"></div>
+        <div class="inputfield"><input type="text" name="dni" placeholder="DNI" value="<?php echo htmlspecialchars($dni); ?>"></div>
 
         <input type="hidden" name="id" value="<?php echo htmlspecialchars($id); ?>">
         <div class="btn-field">

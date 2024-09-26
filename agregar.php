@@ -95,13 +95,13 @@ function validarFormulario() {
     ?>
     <div class="container-general">
     <div class="form-container">
-    <h1>Agregar Nuevo Alumno</h1>
+    <h1>Agregar Nuevo Estudiante</h1>
     <form name="formulario" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post" onsubmit="return validarFormulario()">
-        <div class="inputfield"><input type="text" name="nombre" placeholder="Nombre" required></div>
-        <div class="inputfield"><input type="text" name="apellido" placeholder="Apellido" required></div>
-        <div class="inputfield"><input type="text" name="edad" placeholder="Edad" required></div>
-        <div class="inputfield"><input type="text" name="correo" placeholder="Correo" required></div>
-        <div class="inputfield"><input type="text" name="dni" placeholder="DNI" required></div>
+        <div class="inputfield"><input type="text" name="nombre" placeholder="Ingresar nombre " required></div>
+        <div class="inputfield"><input type="text" name="apellido" placeholder="Ingresar apellido" required></div>
+        <div class="inputfield"><input type="text" name="edad" placeholder="Ingresar edad" required></div>
+        <div class="inputfield"><input type="text" name="correo" placeholder="Ingresar correo" required></div>
+        <div class="inputfield"><input type="text" name="dni" placeholder="Ingresar DNI" required></div>
         <div class="btn-field">
         <input type="submit" name="enviar" value="Agregar">
         <a href="index.php">Regresar</a>
